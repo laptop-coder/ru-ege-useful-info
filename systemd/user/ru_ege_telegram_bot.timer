@@ -7,3 +7,4 @@ Unit=ru_ege_telegram_bot.service
 # 14:00 UTC (17:00 MSK) +- 30 seconds
 OnCalendar=*-*-* 14:00:00
 AccuracySec=30seconds
+Persistent=false
