@@ -8,3 +8,6 @@ Unit=ru_ege_telegram_bot.service
 OnCalendar=*-*-* 14:00:00
 AccuracySec=30seconds
 Persistent=false
+
+[Install]
+WantedBy=multi-user.target

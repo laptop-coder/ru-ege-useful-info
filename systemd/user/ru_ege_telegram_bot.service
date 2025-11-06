@@ -6,7 +6,3 @@ Wants=ru_ege_telegram_bot.timer
 Type=oneshot
 Environment=HOME=%h
 ExecStart=/usr/bin/docker kill ru-ege-telegram-bot-prod --signal="SIGUSR1"
-
-[Install]
-WantedBy=multi-user.target
-
