@@ -1,13 +1,11 @@
 [Unit]
 Description=Timer for the ru_ege_telegram_bot.service
-Requires=ru_ege_telegram_bot.service
 
 [Timer]
 Unit=ru_ege_telegram_bot.service
 # 14:00 UTC (17:00 MSK) +- 30 seconds
 OnCalendar=*-*-* 14:00:00
 AccuracySec=30seconds
-Persistent=false
 
 [Install]
 WantedBy=multi-user.target
