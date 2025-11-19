@@ -2,7 +2,7 @@ services:
   bot:
     build:
       context: .
-    container_name: ru-ege-telegram-bot-dev
+    container_name: ru-ege-telegram-bot
     volumes:
       - /etc/localtime:/etc/localtime
       - ./data/db:/bot/data/db
