@@ -8,14 +8,14 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-BOT_TOKEN = os.getenv("BOT_TOKEN", "")
-if BOT_TOKEN == "":
-    logger.error("Please specify BOT_TOKEN env variable")
+VK_AUTH_TOKEN = os.getenv("VK_AUTH_TOKEN", "")
+if VK_AUTH_TOKEN == "":
+    logger.error("Please specify VK_AUTH_TOKEN env variable")
     os._exit(1)
 
-CHANNEL_ID = os.getenv("CHANNEL_ID", "")
-if CHANNEL_ID == "":
-    logger.error("Please specify CHANNEL_ID env variable")
+GROUP_ID = os.getenv("GROUP_ID", "")
+if GROUP_ID == "":
+    logger.error("Please specify GROUP_ID env variable")
     os._exit(1)
 
 PATH_TO_DB = os.getenv("PATH_TO_DB", "")
