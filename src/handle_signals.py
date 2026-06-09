@@ -1,13 +1,12 @@
 import signal
-import asyncio
 
 from config import logger
 
-from send_ru_ege_info_message import send_ru_ege_info_message
+from publish_post import publish_post
 
 
 def receive_signal(signal_number, frame):
     match signal_number:
         case signal.SIGUSR1:
             logger.info("Received signal SIGUSR1")
-            asyncio.create_task(send_ru_ege_info_message())
+            publish_post()

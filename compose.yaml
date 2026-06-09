@@ -1,6 +1,6 @@
 services:
-  bot:
-    image: ghcr.io/laptopcoder/ru-ege-telegram-bot:latest
+  app:
+    image: ghcr.io/laptopcoder/ru-ege-useful-info:latest
     container_name: ru-ege-useful-info
     volumes:
       - /etc/localtime:/etc/localtime
@@ -12,3 +12,6 @@ services:
     env_file:
       - .env
     restart: always
+
+volumes:
+  db:

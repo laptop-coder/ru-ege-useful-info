@@ -1,5 +1,5 @@
 services:
-  bot:
+  app:
     build:
       context: .
     container_name: ru-ege-useful-info
@@ -17,3 +17,6 @@ services:
       watch:
         - action: rebuild
           path: src
+
+volumes:
+  db:
