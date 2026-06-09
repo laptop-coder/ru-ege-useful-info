@@ -1,3 +1,5 @@
-# Send info message at 17:00 UTC+3 (14:00 UTC)
-0 14 * * * /usr/bin/docker kill ru-ege-telegram-bot --signal="SIGUSR1"
+# ru-ege-useful-info: send info message at 17:00 UTC+3 (14:00 UTC)
+0 14 * * * /usr/bin/docker kill ru-ege-useful-info --signal="SIGUSR1"
+# ru-ege-useful-info: get updates and restart at 06:30 UTC+3 (03:30 UTC)
+30 3 * * * /usr/bin/sh "${HOME}/ru-ege-useful-info/scripts/get_updates_and_restart.sh"
 
