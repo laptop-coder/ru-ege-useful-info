@@ -1,14 +1,14 @@
 services:
   bot:
-    image: laptopcoder/ru-ege-telegram-bot:latest
-    container_name: ru-ege-telegram-bot
+    image: ghcr.io/laptopcoder/ru-ege-telegram-bot:latest
+    container_name: ru-ege-useful-info
     volumes:
       - /etc/localtime:/etc/localtime
-      - ./data/db:/bot/data/db
+      - db:/data/db
     environment:
-      - PATH_TO_DB=/bot/data/db/db.sqlite3
-      - PATH_TO_INITIAL_SQL_QUERIES=/bot/src/sql/init.sql
-      - PATH_TO_GET_INFO_SQL_QUERIES=/bot/src/sql/get_info.sql
+      - PATH_TO_DB=/data/db/db.sqlite3
+      - PATH_TO_INITIAL_SQL_QUERIES=/app/src/sql/init.sql
+      - PATH_TO_GET_INFO_SQL_QUERIES=/app/src/sql/get_info.sql
     env_file:
       - .env
     restart: always
