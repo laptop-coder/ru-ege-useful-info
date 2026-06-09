@@ -5,15 +5,11 @@ from enums import Category
 from get_info import get_info
 from get_one_table_info import get_one_table_info
 from set_all_records_in_table_unused import set_all_records_in_table_unused
-from telegram import Bot
 from templates import ru_ege_info_message_template
-import config
+import vk_api
 
 
-bot = Bot(config.BOT_TOKEN)
-
-
-async def send_ru_ege_info_message() -> None:
+def publish_post() -> None:
     current_date = date.today()
     formatted_date = (
         current_date.strftime("%d.%m.%Y")
@@ -36,4 +32,4 @@ async def send_ru_ege_info_message() -> None:
         unstressed_at_root=info[Category.unstressed_at_root.name],
     )
 
-    await bot.send_message(config.CHANNEL_ID, ru_ege_info_message, parse_mode="HTML")
+    vk_api.wall_post(ru_ege_info_message)
