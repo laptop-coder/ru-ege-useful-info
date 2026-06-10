@@ -1,6 +1,6 @@
 services:
   app:
-    image: ghcr.io/laptopcoder/ru-ege-useful-info:latest
+    image: ghcr.io/laptop-coder/ru-ege-useful-info:latest
     container_name: ru-ege-useful-info
     volumes:
       - /etc/localtime:/etc/localtime
